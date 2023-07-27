@@ -34,16 +34,18 @@ plt.title('Variação da taxa média de HIV global')
 sns.lineplot(x='date', y='HIV Rate', data=hiv)
 plt.show()
 
+# a curva é o valor medio, e tem uma sombra que mostra o minimo e máximo
+
 # taxas médias por nível de renda dos países
 plt.figure(figsize=(10,5))
 plt.title('Variação da taxa média de HIV para níveis de renda')
-sns.lineplot(x='date', y='HIV Rate', hue='Income Leve', ci=None, data=hiv)
+sns.lineplot(x='date', y='HIV Rate', hue='Income Level', ci=None, data=hiv)
 plt.show()
 
 # é prudente evitar representar muitas variáveis simultaneamente no mrdmo gráfico de Linha
 plt.figure(figsize=(10,5))
 plt.title('Variação da taxa média de HIV para cada país')
-sns.lineplot(x='date', y='HIV Rate', hue='country', legend= False, data=hiv)
+sns.lineplot(x='date', y='HIV Rate', hue='country', legend= False, data=hiv)  #nome dos paises não é colocado
 plt.show()
 
 
